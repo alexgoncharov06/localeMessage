@@ -1,0 +1,7 @@
+language: java
+
+script: mvn test -Dmaven.javadoc.skip=true  install
+
+branches:
+  only:
+  - master
