@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="375e9db8-101a-47f3-afcf-46214a17c3ed" name="Default" comment="changed   travis.yml  for test's">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/log4j2-test.xml" />
+    <list default="true" id="375e9db8-101a-47f3-afcf-46214a17c3ed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <ignored path="testWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,20 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.18041237">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j2-test.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="log4j2-test.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/log4j2-test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75268817">
+            <state vertical-scroll-proportion="-17.5">
               <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding />
             </state>
@@ -162,8 +162,8 @@
         <option value="$PROJECT_DIR$/log/testWork.log" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/test/log4j2-test.xml" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/test/resources/log4j2-test.xml" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -901,7 +901,7 @@
       <created>1459365783093</created>
       <option name="number" value="Default" />
       <updated>1459365783093</updated>
-      <workItem from="1459365784664" duration="22750000" />
+      <workItem from="1459365784664" duration="22793000" />
     </task>
     <task id="LOCAL-00001" summary="create test  project">
       <created>1459378296509</created>
@@ -999,7 +999,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459433755166</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="changed   travis.yml  for test's&#10;added lof42-test.xml">
+      <created>1459433996805</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1459433996805</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1008,7 +1014,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22750000" />
+    <option name="totallyTimeSpent" value="22793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="23" width="1655" height="1027" extended-state="6" />
@@ -1054,7 +1060,8 @@
     <MESSAGE value="added log4j logger for test's" />
     <MESSAGE value="changed log4j logger for test's" />
     <MESSAGE value="changed   travis.yml  for test's" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed   travis.yml  for test's" />
+    <MESSAGE value="changed   travis.yml  for test's&#10;added lof42-test.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed   travis.yml  for test's&#10;added lof42-test.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1219,18 +1226,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j2-test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j2-test.xml">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75268817">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.18041237">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
