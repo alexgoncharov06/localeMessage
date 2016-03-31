@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="375e9db8-101a-47f3-afcf-46214a17c3ed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/log4j2-test.xml" afterPath="$PROJECT_DIR$/src/test/resources/log4j2-test.xml" />
     </list>
     <ignored path="testWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -901,7 +900,7 @@
       <created>1459365783093</created>
       <option name="number" value="Default" />
       <updated>1459365783093</updated>
-      <workItem from="1459365784664" duration="23002000" />
+      <workItem from="1459365784664" duration="23019000" />
     </task>
     <task id="LOCAL-00001" summary="create test  project">
       <created>1459378296509</created>
@@ -1011,7 +1010,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459434023891</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="changed   lof42-test.xml">
+      <created>1459434237640</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1459434237640</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1020,7 +1025,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23002000" />
+    <option name="totallyTimeSpent" value="23019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="23" width="1655" height="1027" extended-state="6" />
@@ -1067,7 +1072,8 @@
     <MESSAGE value="changed log4j logger for test's" />
     <MESSAGE value="changed   travis.yml  for test's" />
     <MESSAGE value="changed   travis.yml  for test's&#10;added lof42-test.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed   travis.yml  for test's&#10;added lof42-test.xml" />
+    <MESSAGE value="changed   lof42-test.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed   lof42-test.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
