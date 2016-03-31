@@ -1,6 +1,6 @@
 language: java
 
-script: mvn test -Dmaven.javadoc.skip=true  install
+script: mvn test -Dmaven.javadoc.skip=true -Dorg.apache.logging.log4j.simplelog.StatusLogger.level=OFF install
 
 branches:
   only:
