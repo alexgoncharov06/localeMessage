@@ -94,3 +94,12 @@
 2016-03-31 16:55:10 INFO  LocalizationReader:22 - start method getMessageFromProp() for date 01.05.3916 23:03:00
 2016-03-31 16:55:10 INFO  LocalizationReader:33 - read properties from file locale_ru.properties
 2016-03-31 16:55:10 INFO  LocalizationReader:56 - displayed message: Доброй ночи, Мир!
+2016-03-31 21:59:02 INFO  MessageGetter:17 - Started method getMessage()
+2016-03-31 21:59:02 INFO  LocalizationReader:22 - start method getMessageFromProp() for date 31.03.2016 21:59:02
+2016-03-31 21:59:02 INFO  LocalizationReader:55 - displayed message: Добрый вечер, Мир!
+2016-03-31 22:00:04 INFO  MessageGetter:17 - Started method getMessage()
+2016-03-31 22:00:04 INFO  LocalizationReader:23 - start method getMessageFromProp() for date 31.03.2016 22:00:04
+2016-03-31 22:00:04 INFO  LocalizationReader:56 - displayed message: Добрый вечер, Мир!
+2016-03-31 22:00:33 INFO  MessageGetter:17 - Started method getMessage()
+2016-03-31 22:00:34 INFO  LocalizationReader:23 - start method getMessageFromProp() for date 31.03.2016 22:00:34
+2016-03-31 22:00:34 INFO  LocalizationReader:56 - displayed message: Добрый вечер, Мир!

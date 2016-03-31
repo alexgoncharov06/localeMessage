@@ -1,7 +1,8 @@
 package tests;
 
 import com.github.alexgoncharov06.testWork.services.LocalizationReaderImpl;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import org.junit.runners.Parameterized;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,14 +26,15 @@ public class AppTest {
 
 
 
-    private String lang;
+    private Locale lang;
     private Date current;
     private String message;
 
-    private final Logger logger = Logger.getLogger(AppTest.class.getName());
+    private final Logger logger = LogManager.getLogger(AppTest.class.getName());
 
 
-    public AppTest(String lang, Date current, String message) {
+
+    public AppTest(Locale lang, Date current, String message) {
         this.lang = lang;
         this.current = current;
         this.message = message;
@@ -42,33 +45,37 @@ public class AppTest {
     @Parameterized.Parameters(name = "{index}: lang: {0}, time: {1}, message: {2}")
     public static Iterable<Object[]> data1() {
         return Arrays.asList(new Object[][] {
-                { "en", new Date(2016,3,31,6,3,0), "Good morning, World!" },
-                { "en", new Date(2016,3,31,9,3,0), "Good day, World!" },
-                { "en", new Date(2016,3,31,19,3,0), "Good evening, World!" },
-                { "en", new Date(2016,3,31,23,3,0), "Good night, World!" },
-                { "ru", new Date(2016,3,31,6,3,0), "Доброе утро, Мир!" },
-                { "ru", new Date(2016,3,31,9,3,0), "Добрый день, Мир!" },
-                { "ru", new Date(2016,3,31,19,3,0), "Добрый вечер, Мир!" },
-                { "ru", new Date(2016,3,31,23,3,0), "Доброй ночи, Мир!" }
+                { Locale.US, new Date(116,2,31,6,3,0), "Good morning, World!" },
+                { Locale.US, new Date(116,2,31,9,3,0), "Good day, World!" },
+                { Locale.US, new Date(116,2,31,19,3,0), "Good evening, World!" },
+                { Locale.US, new Date(116,2,31,23,3,0), "Good night, World!" },
+                { Locale.forLanguageTag("ru-RU"), new Date(116,2,31,6,3,0), "Доброе утро, Мир!" },
+                { Locale.forLanguageTag("ru-RU"), new Date(116,2,31,9,3,0), "Добрый день, Мир!" },
+                { Locale.forLanguageTag("ru-RU"), new Date(116,2,31,19,3,0), "Добрый вечер, Мир!" },
+                { Locale.forLanguageTag("ru-RU"), new Date(116,2,31,23,3,0), "Доброй ночи, Мир!" }
         });
     }
+
+
 
 
     @Before
     public void setUp() {
 
-        System.setProperty("user.language", lang);
+        Locale.setDefault(lang);
     }
 
 
     @After
     public void tearDown() {
-        System.setProperty("user.language", "ru");
+
+        Locale.setDefault(Locale.forLanguageTag("ru-RU"));
     }
 
     @Test
     public void testGettMessage() throws IOException {
 
+        logger.info("Locale: " + lang.toString() + ", Time: " + current.toGMTString() + ", Message: " + message);
         assertEquals(message, new LocalizationReaderImpl().getMessageFromProp(current));
     }
 

@@ -15,6 +15,9 @@ public class MessageGetterImpl implements MessageGetter {
     private static final Logger log = LogManager.getLogger(MessageGetter.class);
     public Message getMessage() {
         log.info("Started method getMessage()");
+
+
+
         Message message = new Message();
         LocalizationReader localizationReader = new LocalizationReaderImpl();
         try {
