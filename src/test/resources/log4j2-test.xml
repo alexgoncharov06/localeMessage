@@ -10,7 +10,6 @@
         <Logger name="com.example" level="All" />
         <Root>
             <AppenderRef ref="Console" level="All" />
-
         </Root>
     </Loggers>
 </Configuration>
