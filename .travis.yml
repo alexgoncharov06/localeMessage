@@ -1,6 +1,6 @@
 language: java
 
-script: mvn test -Dmaven.javadoc.skip=true  install
+script: mvn test -Dmaven.javadoc.skip=true  -Dlog4j.configurationFile=log4j2-test.xml  install
 
 branches:
   only:
