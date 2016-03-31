@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.alexgoncharov06.testWork.services.LocalizationReaderImpl;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,10 +22,13 @@ import static org.junit.Assert.assertEquals;
 public class AppTest {
 
 
+
+
     private String lang;
     private Date current;
     private String message;
 
+    private final Logger logger = Logger.getLogger(AppTest.class.getName());
 
 
     public AppTest(String lang, Date current, String message) {
@@ -64,8 +68,10 @@ public class AppTest {
 
     @Test
     public void testGettMessage() throws IOException {
+
         assertEquals(message, new LocalizationReaderImpl().getMessageFromProp(current));
     }
 
 
 }
+
