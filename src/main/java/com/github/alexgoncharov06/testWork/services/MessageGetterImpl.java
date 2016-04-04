@@ -5,7 +5,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.util.Date;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Created by alexwolf on 30.03.16.
@@ -20,8 +21,11 @@ public class MessageGetterImpl implements MessageGetter {
 
         Message message = new Message();
         LocalizationReader localizationReader = new LocalizationReaderImpl();
+
         try {
-            message.setMessage(localizationReader.getMessageFromProp(new Date(System.currentTimeMillis())));
+
+            message.setMessage(localizationReader.getMessageFromProp(Calendar.getInstance(), Locale.getDefault()));
+
         } catch (IOException e) {
 
             log.error("error message: " + e.getMessage());
