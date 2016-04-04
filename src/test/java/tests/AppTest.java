@@ -56,7 +56,7 @@ public class AppTest {
         calendar.set(Calendar.HOUR_OF_DAY, currentHours);
 
 
-        logger.info("Locale: " + lang.toString() + ", Time: " + calendar.toString() + ", Message: " + message);
+        logger.info("Locale: " + lang.toString() + ", Time: " + calendar.getTime().toString() + ", Message: " + message);
         assertEquals(message, new LocalizationReaderImpl().getMessageFromProp(calendar, lang));
     }
 
