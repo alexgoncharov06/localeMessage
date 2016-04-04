@@ -18,8 +18,8 @@ public class Message {
     }
 
 
-    public void printMessage(){
+    public void printMessage() {
 
-      System.out.println(message);
-  }
+        System.out.println(message);
+    }
 }

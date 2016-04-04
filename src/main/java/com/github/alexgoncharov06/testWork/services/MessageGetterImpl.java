@@ -14,9 +14,9 @@ import java.util.Locale;
 public class MessageGetterImpl implements MessageGetter {
 
     private static final Logger log = LogManager.getLogger(MessageGetter.class);
+
     public Message getMessage() {
         log.info("Started method getMessage()");
-
 
 
         Message message = new Message();
@@ -33,7 +33,6 @@ public class MessageGetterImpl implements MessageGetter {
 
         return message;
     }
-
 
 
 }

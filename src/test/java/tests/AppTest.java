@@ -22,14 +22,10 @@ import static org.junit.Assert.assertEquals;
 public class AppTest {
 
 
-
-
+    private final Logger logger = LogManager.getLogger(AppTest.class.getName());
     private Locale lang;
     private int currentHours;
     private String message;
-
-    private final Logger logger = LogManager.getLogger(AppTest.class.getName());
-
 
 
     public AppTest(Locale lang, int currentHours, String message) {
@@ -39,30 +35,25 @@ public class AppTest {
     }
 
 
-
     @Parameterized.Parameters(name = "{index}: lang: {0}, time: {1}, message: {2}")
     public static Iterable<Object[]> data1() {
-        return Arrays.asList(new Object[][] {
-                { Locale.US, 6, "Good morning, World!" },
-                { Locale.US, 9, "Good day, World!" },
-                { Locale.US, 19, "Good evening, World!" },
-                { Locale.US, 23, "Good night, World!" },
-                { Locale.forLanguageTag("ru-RU"), 6, "Доброе утро, Мир!" },
-                { Locale.forLanguageTag("ru-RU"), 9, "Добрый день, Мир!" },
-                { Locale.forLanguageTag("ru-RU"), 19, "Добрый вечер, Мир!" },
-                { Locale.forLanguageTag("ru-RU"), 23, "Доброй ночи, Мир!" }
+        return Arrays.asList(new Object[][]{
+                {Locale.US, 6, "Good morning, World!"},
+                {Locale.US, 9, "Good day, World!"},
+                {Locale.US, 19, "Good evening, World!"},
+                {Locale.US, 23, "Good night, World!"},
+                {Locale.forLanguageTag("ru-RU"), 6, "Доброе утро, Мир!"},
+                {Locale.forLanguageTag("ru-RU"), 9, "Добрый день, Мир!"},
+                {Locale.forLanguageTag("ru-RU"), 19, "Добрый вечер, Мир!"},
+                {Locale.forLanguageTag("ru-RU"), 23, "Доброй ночи, Мир!"}
         });
     }
-
-
-
 
 
     @Test
     public void testGettMessage() throws IOException {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, currentHours);
-
 
 
         logger.info("Locale: " + lang.toString() + ", Time: " + calendar.toString() + ", Message: " + message);

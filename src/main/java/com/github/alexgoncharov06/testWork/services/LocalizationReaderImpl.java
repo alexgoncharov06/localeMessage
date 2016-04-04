@@ -5,21 +5,19 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Created by alexwolf on 30.03.16.
  */
-public class LocalizationReaderImpl  implements LocalizationReader{
+public class LocalizationReaderImpl implements LocalizationReader {
 
-
-    private static final Logger log = LogManager.getLogger(LocalizationReader.class);
-//    private static final ApplicationContext context = new ClassPathXmlApplicationContext("localeBean.xml");
-//    private static final Map<Locale, ResourceBundle> LOCALE_RESOURCE_BUNDLE_MAP = getResourceBundles("locale");
 
     public static final ArrayList<String> LOCALES = getLocaleList();
-
-
+    private static final Logger log = LogManager.getLogger(LocalizationReader.class);
 
     private static ArrayList<String> getLocaleList() {
         ArrayList<String> locales = new ArrayList<String>();
@@ -35,39 +33,39 @@ public class LocalizationReaderImpl  implements LocalizationReader{
 
         String message = null;
         ResourceBundle bundle = null;
-        
 
-        if(LOCALES.contains(locale.toString())){
+
+        if (LOCALES.contains(locale.toString())) {
 
             bundle = ResourceBundle.getBundle("locale.locale", locale, new UTF8Control());
 
 
-        } else{
+        } else {
 
             bundle = ResourceBundle.getBundle("locale.locale", Locale.US, new UTF8Control());
 
         }
 
 
-        if (current.get(Calendar.HOUR_OF_DAY) >= 6 && current.get(Calendar.HOUR_OF_DAY) < 9){
+        if (current.get(Calendar.HOUR_OF_DAY) >= 6 && current.get(Calendar.HOUR_OF_DAY) < 9) {
 
             message = bundle.getString("morning");
 
         }
 
-        if (current.get(Calendar.HOUR_OF_DAY) >= 9 && current.get(Calendar.HOUR_OF_DAY) < 19){
+        if (current.get(Calendar.HOUR_OF_DAY) >= 9 && current.get(Calendar.HOUR_OF_DAY) < 19) {
 
             message = bundle.getString("day");
 
         }
 
-        if (current.get(Calendar.HOUR_OF_DAY) >= 19 && current.get(Calendar.HOUR_OF_DAY) < 23){
+        if (current.get(Calendar.HOUR_OF_DAY) >= 19 && current.get(Calendar.HOUR_OF_DAY) < 23) {
 
             message = bundle.getString("evening");
 
         }
 
-        if (current.get(Calendar.HOUR_OF_DAY) >= 23 || current.get(Calendar.HOUR_OF_DAY) < 6){
+        if (current.get(Calendar.HOUR_OF_DAY) >= 23 || current.get(Calendar.HOUR_OF_DAY) < 6) {
 
             message = bundle.getString("night");
 
