@@ -14,8 +14,7 @@ public class LocalizationReaderImpl  implements LocalizationReader{
 
 
     private static final Logger log = LogManager.getLogger(LocalizationReader.class);
-//    private static final ApplicationContext context = new ClassPathXmlApplicationContext("localeBean.xml");
-//    private static final Map<Locale, ResourceBundle> LOCALE_RESOURCE_BUNDLE_MAP = getResourceBundles("locale");
+
 
     public static final ArrayList<String> LOCALES = getLocaleList();
 
